@@ -1,0 +1,154 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Width="330" Height="500"
+        x:Class="MerryChristmas.MainWindow"
+        Title="MerryChristmas" CanResize="False">
+	<Window.Styles>
+		<Style Selector="Ellipse.red">
+			<Style.Animations>
+				<Animation Duration="0:0:2" IterationCount="Infinite">
+					<KeyFrame Cue="0%">
+						<Setter Property="Fill" Value="Red"/>
+					</KeyFrame>
+					<KeyFrame Cue="50%">
+						<Setter Property="Fill" Value="Olive"/>
+					</KeyFrame>
+					<KeyFrame Cue="100%">
+						<Setter Property="Fill" Value="Blue"/>
+					</KeyFrame>
+				</Animation>
+			</Style.Animations>
+		</Style>
+		<Style Selector="Ellipse.olive">
+			<Style.Animations>
+				<Animation Duration="0:0:2" IterationCount="Infinite">
+					<KeyFrame Cue="0%">
+						<Setter Property="Fill" Value="Olive"/>
+					</KeyFrame>
+					<KeyFrame Cue="50%">
+						<Setter Property="Fill" Value="Blue"/>
+					</KeyFrame>
+					<KeyFrame Cue="100%">
+						<Setter Property="Fill" Value="Red"/>
+					</KeyFrame>
+				</Animation>
+			</Style.Animations>
+		</Style>
+		<Style Selector="Ellipse.blue">
+			<Style.Animations>
+				<Animation Duration="0:0:2" IterationCount="Infinite">
+					<KeyFrame Cue="0%">
+						<Setter Property="Fill" Value="Blue"/>
+					</KeyFrame>
+					<KeyFrame Cue="50%">
+						<Setter Property="Fill" Value="Red"/>
+					</KeyFrame>
+					<KeyFrame Cue="100%">
+						<Setter Property="Fill" Value="Olive"/>
+					</KeyFrame>
+				</Animation>
+			</Style.Animations>
+		</Style>
+		<Style Selector="Ellipse.red">
+			<Style.Animations>
+				<Animation Duration="0:0:2" IterationCount="Infinite">
+					<KeyFrame Cue="0%">
+						<Setter Property="Fill" Value="Red"/>
+					</KeyFrame>
+					<KeyFrame Cue="50%">
+						<Setter Property="Fill" Value="Olive"/>
+					</KeyFrame>
+					<KeyFrame Cue="100%">
+						<Setter Property="Fill" Value="Blue"/>
+					</KeyFrame>
+				</Animation>
+			</Style.Animations>
+		</Style>
+
+
+		<Style Selector="Ellipse.ball">
+			<Setter Property="Height" Value="20"/>
+			<Setter Property="Width" Value="20"/>
+		</Style>
+	</Window.Styles>
+	<Border Padding="20" BorderThickness="5" BorderBrush="Yellow">
+		<Grid RowDefinitions="*,auto">
+			<Grid>
+				<Image Stretch="Fill">
+					<Image.Source>
+						<DrawingImage>
+							<GeometryDrawing  Brush="Green"
+												  Geometry="M1,21H23L12,2"   />
+						</DrawingImage>
+					</Image.Source>
+				</Image>
+				<Image Stretch="Fill" Height="40" Width="40"
+					   VerticalAlignment="Top" Margin="0,-10">
+					<Image.Source>
+						<DrawingImage>
+							<GeometryDrawing  Brush="Yellow"
+											  Geometry="F1M511.998992919922,-874.668029785156C528.767028808594,-874.668029785156,543.9990234375,-864.85400390625,550.867980957031,-849.536987304688L656.127014160156,-616.533996582031 899.369995117188,-597.205993652344C916.351989746094,-595.882995605469,930.901000976563,-584.491027832031,936.405029296875,-568.362976074219L936.403991699219,-568.364013671875C941.866027832031,-552.192993164063,937.215026855469,-534.359008789063,924.543029785156,-522.924011230469L731.007019042969,-348.759002685547 809.044006347656,-75.6919937133789C813.950988769531,-58.5400009155273 807.593017578125,-40.0660018920898 793.171997070313,-29.5269966125488 778.666015625,-18.988000869751 759.1669921875,-18.6040000915527 744.318969726563,-28.5030002593994L511.998992919922,-183.382995605469 279.678985595703,-28.5030002593994C272.510986328125,-23.7240009307861 264.234008789063,-21.3349990844727 255.998992919922,-21.3349933624268 247.509002685547,-21.3349990844727 239.061004638672,-23.8950004577637 231.72200012207,-28.9299983978271 217.343002319336,-38.8709983825684 210.473999023438,-56.5779991149902 214.399002075195,-73.6019973754883L277.971984863281,-348.886993408203 98.2170028686523,-524.119018554688C86.2279968261719,-535.809997558594 82.2170028686523,-553.431030273438 87.8919982910156,-569.174987792969 93.5670013427734,-584.919006347656 107.944999694824,-595.883972167969 124.627998352051,-597.206970214844L367.871002197266,-616.534973144531 473.130004882813,-849.580017089844C479.998992919922,-864.85498046875,495.230987548828,-874.668029785156,511.998992919922,-874.668029785156z"   />
+						</DrawingImage>
+					</Image.Source>
+				</Image>
+				<Canvas>
+					<Ellipse Fill="Red" Classes="ball red"
+							 Canvas.Top="50" Canvas.Left="125"/>
+					<Ellipse Fill="Olive" Classes="ball olive"
+							 Canvas.Top="100" Canvas.Left="100"/>
+					<Ellipse Fill="Blue" Classes="ball blue"
+							 Canvas.Top="150" Canvas.Left="75"/>
+					<Ellipse Fill="Red" Classes="ball red"
+							 Canvas.Top="200" Canvas.Left="50"/>
+					<Ellipse Fill="Olive" Classes="ball olive"
+							 Canvas.Top="250" Canvas.Left="25"/>
+					<Ellipse Fill="Blue" Classes="ball blue"
+							 Canvas.Top="300" Canvas.Left="0"/>
+
+
+					<Ellipse Fill="Blue" Classes="ball blue"
+							 Canvas.Top="100" Canvas.Left="150"/>
+					<Ellipse Fill="Red" Classes="ball red"
+							 Canvas.Top="150" Canvas.Left="125"/>
+					<Ellipse Fill="Olive" Classes="ball olive"
+							 Canvas.Top="200" Canvas.Left="100"/>
+					<Ellipse Fill="Blue" Classes="ball blue"
+							 Canvas.Top="250" Canvas.Left="75"/>
+					<Ellipse Fill="Red" Classes="ball red"
+							 Canvas.Top="300" Canvas.Left="50"/>
+
+					<Ellipse Fill="Olive" Classes="ball olive"
+							 Canvas.Top="150" Canvas.Left="175"/>
+					<Ellipse Fill="Red" Classes="ball red"
+							 Canvas.Top="200" Canvas.Left="150"/>
+					<Ellipse Fill="Olive" Classes="ball olive"
+							 Canvas.Top="250" Canvas.Left="125"/>
+					<Ellipse Fill="Blue" Classes="ball blue"
+							 Canvas.Top="300" Canvas.Left="100"/>
+
+					<Ellipse Fill="Olive" Classes="ball olive"
+							 Canvas.Top="200" Canvas.Left="200"/>
+					<Ellipse Fill="Blue" Classes="ball blue"
+							 Canvas.Top="250" Canvas.Left="175"/>
+					<Ellipse Fill="Red" Classes="ball red"
+							 Canvas.Top="300" Canvas.Left="150"/>
+
+
+					<Ellipse Fill="Red" Classes="ball red"
+							 Canvas.Top="250" Canvas.Left="225"/>
+					<Ellipse Fill="Olive" Classes="ball olive"
+							 Canvas.Top="300" Canvas.Left="200"/>
+
+
+					<Ellipse Fill="Blue" Classes="ball blue"
+							 Canvas.Top="300" Canvas.Left="250"/>
+				</Canvas>
+
+			</Grid>
+			<Rectangle Grid.Row="1" ZIndex="-1"
+					   Width="40" Height="130" Fill="Brown"/>
+		</Grid>
+	</Border>
+</Window>
